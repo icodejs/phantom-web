@@ -1,0 +1,35 @@
+{
+  "name": "phantom-web",
+  "version": "0.0.0",
+  "description": "Create images and PDF files from web pages",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/ --reporter spec",
+    "start": "nodemon index.js 4006"
+  },
+  "keywords": [
+    "phantom",
+    "image",
+    "pdf",
+    "webpage",
+    "generate"
+  ],
+  "author": "Jay Esco",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "sinon": "~1.7.3",
+    "chai": "~1.8.1",
+    "sinon-chai": "~2.4.0"
+  },
+  "dependencies": {
+    "express": "~3.4.4",
+    "lodash": "~2.3.0",
+    "q": "~0.9.7",
+    "phantomjs": "~1.9.2-2",
+    "request": "~2.27.0"
+  }
+}
