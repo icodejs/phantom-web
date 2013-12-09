@@ -13,7 +13,15 @@ app.configure(function() {
 app.get('/convert', function (req, res) {
     request(phantomServerAddr, function (err, response, body) {
         var buf = new Buffer(body, 'base64');
+
+        console.log(buf);
         res.end(buf);
+    });
+});
+
+app.get('/raw', function (req, res) {
+    request(phantomServerAddr, { url: req.param('url')}, function (err, response, body) {
+        res.end('<img src="data:image/png;base64,' + body + '" />');
     });
 });
 
